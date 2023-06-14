@@ -2,14 +2,9 @@ html,
 body {
     background-color: darkslateblue;
     color: white;
-}
-
-.title {
-    display: flex;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .dark-green {
@@ -18,20 +13,31 @@ body {
 
 h1 {
     font-size: 5rem;
+    white-space: nowrap;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .one-word {
     font-size: 4rem;
+    white-space: nowrap;
     font-family: 'Cedarville Cursive', cursive;
 }
 
 .content {
     margin: 4rem;
+    max-width: 1200px;
+    margin-top: 12rem;
+}
+
+.text {
+    min-width: 400px;
 }
 
 .image {
     position: relative;
     top: -16rem;
+    right: -10rem;
     transform: rotate(180deg);
     animation: brush 3s infinite;
     animation-delay: 1s;
@@ -41,6 +47,7 @@ h1 {
 .main-content {
     font-size: 1.5rem;
     display: flex;
+    justify-content: space-around;
 }
 
 .love {
@@ -62,5 +69,11 @@ h1 {
 
     to {
         transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
     }
 }
